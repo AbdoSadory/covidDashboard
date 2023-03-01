@@ -1,5 +1,5 @@
 .mapContainerParent {
-  height: 500px;
+  height: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -8,7 +8,7 @@
   height: 100%;
 }
 .countryName {
-  font-size: 12px;
+  font-size: 20px;
   color: white;
 }
 .countryDetails {
@@ -21,4 +21,12 @@
 }
 .countryDetails span{
   font-weight: bold;
+}
+
+@media (max-width:767px) {
+  .mapContainerParent{
+    height: 500px;
+    margin-bottom: 16px;
+  }
+  
 }

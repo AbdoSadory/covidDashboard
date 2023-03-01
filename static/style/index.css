@@ -40,3 +40,15 @@ code {
 .leaflet-container a.leaflet-popup-close-button:hover {
   color: black;
 }
+.CountryLogsHeader{
+  color: white;
+  text-align: center;
+}
+
+
+@media (max-width:767px) {
+  .CountryLogsHeader{
+    padding-top: 10px;
+ border-top: 1px solid yellow;
+}
+}

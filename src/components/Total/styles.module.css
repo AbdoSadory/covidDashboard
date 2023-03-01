@@ -1,0 +1,33 @@
+.valuesContainerSection {
+  margin: 20px 0px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.valuesContainer {
+  padding: 20px 0px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.valuesContainer:nth-child(2) {
+  border-left: 2px solid yellow;
+  border-right: 2px solid yellow;
+}
+.valuesContainer h2 {
+  color: yellow;
+}
+.valuesContainer p {
+  color: white;
+  font-size: 26px;
+}
+@media (max-width:767px) {
+  .valuesContainer:nth-child(2) {
+  border-left: unset;
+  border-right: unset;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+}
+}
+@media (max-width:425px){
+  .valuesContainer {
+  padding: 10px 0px;}
+}

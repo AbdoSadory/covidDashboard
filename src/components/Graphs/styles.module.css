@@ -1,0 +1,17 @@
+.graphsContainerSection {
+  margin: 0px 0px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.graphContainer {
+  padding: 8px 0px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.graphContainer h3 {
+  color: yellow;
+}
+.graphContainer:nth-child(2) {
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+}
