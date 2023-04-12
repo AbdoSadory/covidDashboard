@@ -24,7 +24,6 @@ const Graphs = ({ historicalData }) => {
           <h3 className="text-capitalize">Cases log</h3>
           <Graph
             data={historicalData.cases.data}
-        
           />
         </div>
         <div className={`${styles.graphContainer} col-12`}>
@@ -38,7 +37,6 @@ const Graphs = ({ historicalData }) => {
           <h3 className="text-capitalize">recovered log</h3>
           <Graph
             data={historicalData.recovered.data}
-          
           />
         </div>
       </div>

@@ -6,14 +6,14 @@
 .valuesContainer {
   padding: 20px 0px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--secondaryColor);
 }
 .valuesContainer:nth-child(2) {
-  border-left: 2px solid yellow;
-  border-right: 2px solid yellow;
+  border-left: 2px solid var(--chartsColor);
+  border-right: 2px solid var(--chartsColor);
 }
 .valuesContainer h2 {
-  color: yellow;
+  color: var(--titlesColor);
 }
 .valuesContainer p {
   color: white;
@@ -23,8 +23,8 @@
   .valuesContainer:nth-child(2) {
   border-left: unset;
   border-right: unset;
-  border-top: 2px solid yellow;
-  border-bottom: 2px solid yellow;
+  border-top: 2px solid var(--chartsColor);
+  border-bottom: 2px solid var(--chartsColor);
 }
 }
 @media (max-width:425px){

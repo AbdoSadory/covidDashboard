@@ -111,29 +111,33 @@ export default function Home() {
       }
       lastDataPoint = data[index + 1];
     });
-    console.log("chartData is done");
     return chartData;
   };
   const dataRequest = useCallback(async () => {
     setIsLoading(true);
     try {
-      await axios.get("https://disease.sh/v3/covid-19/countries/").then((res) =>
-        setCountriesData(
-          res.data
-            .filter((country) => country.country !== "Israel")
-            .map((country) => {
-              return {
-                countryName: country.country,
-                countryInfo: country.countryInfo,
-                active: country.active,
-                cases: country.cases,
-                deaths: country.deaths,
-                recovered: country.recovered,
-                population: country.population,
-              };
-            })
+      await axios
+        .get("https://disease.sh/v3/covid-19/countries/")
+        .then((res) =>
+          setCountriesData(
+            res.data
+              .filter((country) => country.country !== "Palestine")
+              .map((country) => {
+                return {
+                  countryName: country.country,
+                  countryInfo: country.countryInfo,
+                  active: country.active,
+                  cases: country.cases,
+                  deaths: country.deaths,
+                  recovered: country.recovered,
+                  population: country.population,
+                };
+              })
+          )
         )
-      );
+        .catch((err) => {
+          console.log(err.message);
+        });
       await axios
         .get("https://disease.sh/v3/covid-19/all")
         .then((res) => setWorldwideData(res.data));
@@ -151,7 +155,7 @@ export default function Home() {
                     pointBackgroundColor: "white",
                     fill: true,
                     tension: 0.4,
-                    borderColor: "yellow",
+                    borderColor: "#dcd7c9",
                     pointStyle: false,
                     // showLine:false,
                   },
@@ -168,7 +172,7 @@ export default function Home() {
                     pointBackgroundColor: "white",
                     fill: true,
                     tension: 0.4,
-                    borderColor: "yellow",
+                    borderColor: "#dcd7c9",
                     pointStyle: false,
                     // showLine:false,
                   },
@@ -185,9 +189,8 @@ export default function Home() {
                     pointBackgroundColor: "white",
                     fill: true,
                     tension: 0,
-                    borderColor: "yellow",
+                    borderColor: "#dcd7c9",
                     pointStyle: false,
-                    // showLine:false,
                   },
                 ],
               },
@@ -201,13 +204,11 @@ export default function Home() {
     setIsLoading(false);
   }, []);
   const getCountryHistory = async (countryName) => {
-    console.log(countryName);
     await axios
       .get(
         `https://disease.sh/v3/covid-19/historical/${countryName}?lastdays=all`
       )
       .then((res) => {
-        console.log(res.data);
         setCountryData({
           cases: {
             data: {
@@ -219,7 +220,7 @@ export default function Home() {
                   pointBackgroundColor: "white",
                   fill: true,
                   tension: 0.4,
-                  borderColor: "yellow",
+                  borderColor: "#dcd7c9",
                   pointStyle: false,
                 },
               ],
@@ -235,7 +236,7 @@ export default function Home() {
                   pointBackgroundColor: "white",
                   fill: true,
                   tension: 0.4,
-                  borderColor: "yellow",
+                  borderColor: "#dcd7c9",
                   pointStyle: false,
                 },
               ],
@@ -253,13 +254,16 @@ export default function Home() {
                   pointBackgroundColor: "white",
                   fill: true,
                   tension: 0,
-                  borderColor: "yellow",
+                  borderColor: "#dcd7c9",
                   pointStyle: false,
                 },
               ],
             },
           },
         });
+      })
+      .catch((err) => {
+        console.log(err.message);
       });
   };
   useEffect(() => {

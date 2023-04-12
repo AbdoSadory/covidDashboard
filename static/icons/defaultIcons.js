@@ -1,4 +1,3 @@
-import React from "react";
 import L from "leaflet";
 import iconUrl from "./../images/marker-icon.png";
 import iconShadow from "./../images/marker-shadow.png";

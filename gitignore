@@ -36,6 +36,10 @@ build/Release
 node_modules/
 jspm_packages/
 node_modules/*
+.cache/
+.cache/*
+public/
+public/*
 # Typescript v1 declaration files
 typings/
 
@@ -55,8 +59,8 @@ typings/
 .env*
 
 # gatsby files
-.cache/
-public/
+.cache/*
+public/*
 
 # Mac files
 .DS_Store

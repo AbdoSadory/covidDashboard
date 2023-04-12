@@ -3,16 +3,25 @@ import { Line } from "react-chartjs-2";
 
 const Graph = ({ data }) => {
   let options = {
-    plugins: { legend: true },
+    plugins: {
+      legend: {
+        labels: {
+          color: "#dcd7c9",
+          font:{
+            size:"12px"
+          }
+        },
+      },
+    },
     scales: {
       y: {
         ticks: {
-          color: "white",
+          color: "#dcd7c9",
         },
       },
       x: {
         ticks: {
-          color: "white",
+          color: "#dcd7c9",
         },
       },
     },

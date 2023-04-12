@@ -6,12 +6,12 @@
 .graphContainer {
   padding: 8px 0px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--secondaryColor);
 }
 .graphContainer h3 {
-  color: yellow;
+  color: var(--titlesColor);
 }
 .graphContainer:nth-child(2) {
-  border-top: 2px solid yellow;
-  border-bottom: 2px solid yellow;
+  border-top: 2px solid var(--chartsColor);
+  border-bottom: 2px solid var(--chartsColor);
 }

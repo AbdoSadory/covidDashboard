@@ -1,5 +1,8 @@
 :root {
-  --primaryColor: #9062bc;
+  --primaryColor: #2c3639;
+  --secondaryColor: #3f4e4f;
+  --titlesColor: #dcd7c9;
+  --chartsColor: #a27b5c;
 }
 body {
   margin: 0;
@@ -8,25 +11,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
- main{
-    background-color: var(--primaryColor);
- }
- header {
+main {
+  background-color: var(--primaryColor);
+}
+header {
   text-align: center;
   font-size: 50px;
-  color: white;
+  color: var(--titlesColor);
   padding: 20px 0px;
 }
-.leaflet-marker-icon{
-    width: 20px !important;
-    height: 30px !important;
+.leaflet-marker-icon {
+  width: 20px !important;
+  height: 30px !important;
 }
 .leaflet-popup-content-wrapper {
   background-color: var(--primaryColor);
@@ -35,10 +37,24 @@ code {
   background-color: var(--primaryColor);
 }
 .leaflet-container a.leaflet-popup-close-button {
-  color: yellow;
+  color: var(--titlesColor);
 }
 .leaflet-container a.leaflet-popup-close-button:hover {
-  color: black;
+  color: var(--chartsColor);
+}
+.CountryLogsHeader {
+  color: var(--titlesColor);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  header {
+    font-size: 20px;
+  }
+  .CountryLogsHeader {
+    padding-top: 10px;
+    border-top: 1px solid var(--chartsColor);
+  }
 }
 .CountryLogsHeader{
   color: white;

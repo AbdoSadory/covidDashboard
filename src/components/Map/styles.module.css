@@ -9,10 +9,10 @@
 }
 .countryName {
   font-size: 20px;
-  color: white;
+  color: var(--titlesColor);
 }
 .countryDetails {
-  color: white;
+  color: var(--titlesColor);
   font-size: 10px;
   text-transform: capitalize;
   list-style-type: none;

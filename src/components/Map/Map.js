@@ -54,7 +54,9 @@ const Map = ({ countries, handleMarkerClick }) => {
             >
               <Popup>
                 <h2 className={styles.countryName}>
-                  {countryData.properties.countryName}
+                  {countryData.properties.countryName === "Israel"
+                    ? "Palestine"
+                    : countryData.properties.countryName}
                 </h2>
                 <ul className={styles.countryDetails}>
                   <li>
